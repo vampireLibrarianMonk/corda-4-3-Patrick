@@ -38,7 +38,7 @@ class IOUContract : Contract {
                 "All of the participants must be signers." using (command.signers.containsAll(out.participants.map{ it.owningKey }))
 
                 // IOU-specific constraints
-                "The IOU's value must be non-negative." using (out.value > 0)
+                "The IOU's value must be non-negative." using (out.amount.quantity > 0)
             }
 
             is Commands.Pay -> requireThat {
@@ -51,9 +51,9 @@ class IOUContract : Contract {
                 "The lender and the borrower cannot have the same identity." using
                         (inputIOU.borrower != inputIOU.lender)
                 // Calculate amount paid
-                val amountPaid = inputIOU.value - inputIOU.paid
+                val amountPaid = inputIOU.amount.quantity - inputIOU.paid.quantity
                 // Amount paid is positive and does not exceed payment for the IOU
-                requireThat { "Amount paid is positive." using (inputIOU.paid > 0 && amountPaid >= 0)}
+                requireThat { "Amount paid is positive." using (inputIOU.paid.quantity > 0 && amountPaid >= 0)}
                 // Signatures are between lender and borrower
                 "Both lender and borrower together only may sign IOU transaction." using (
                         command.signers.toSet() == inputIOU.participants.map { it.owningKey }.toSet())

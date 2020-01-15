@@ -1,3 +1,10 @@
 .idea/*
 .gradle/*
 */bin
+build
+contracts-java/build/
+contracts-kotlin/build/
+contracts-kotlin/out/
+workflows-java/build/
+workflows-kotlin/build/
+workflows-kotlin/out/

@@ -1,48 +1,47 @@
 package com.example.state
 
-import com.example.contract.IOUContract
-import com.example.schema.IOUSchemaV1
+import net.corda.core.contracts.Amount
 import net.corda.core.contracts.BelongsToContract
-import net.corda.core.contracts.ContractState
 import net.corda.core.contracts.LinearState
 import net.corda.core.contracts.UniqueIdentifier
-import net.corda.core.identity.AbstractParty
 import net.corda.core.identity.Party
-import net.corda.core.schemas.MappedSchema
-import net.corda.core.schemas.PersistentState
-import net.corda.core.schemas.QueryableState
+import com.example.contract.IOUContract
+import java.util.*
 
 /**
- * The state object recording IOU agreements between two parties.
- *
- * A state must implement [ContractState] or one of its descendants.
- *
- * @param value the value of the IOU.
- * @param lender the party issuing the IOU.
- * @param borrower the party receiving and approving the IOU.
+ * The IOU State object, with the following properties
+ * - [amount] The amount owed by the [borrower] to the [lender].
+ * - [lender] The lending party.
+ * - [borrower] The borrowing party.
+ * - [contract] Holds a reference to the [IOUContract]
+ * - [paid] Records how much of the [amount] has been paid.
+ * - [linearId] A unique id shared by all LinearState states representing the same agreement throughout history within
+ *  the vaults of all parties. Verify methods should check that one input and one output share the id in a transaction,
+ *  except at issuance/termination.
  */
 @BelongsToContract(IOUContract::class)
-data class IOUState(val value: Int,
-                    val paid: Int,
+data class IOUState(val amount: Amount<Currency>,
                     val lender: Party,
                     val borrower: Party,
-                    override val linearId: UniqueIdentifier = UniqueIdentifier()):
-        LinearState, QueryableState {
-    /** The public keys of the involved parties. */
-    override val participants: List<AbstractParty> get() = listOf(lender, borrower)
+                    val paid: Amount<Currency> = Amount(0, amount.token),
+                    override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState {
 
-    override fun generateMappedObject(schema: MappedSchema): PersistentState {
-        return when (schema) {
-            is IOUSchemaV1 -> IOUSchemaV1.PersistentIOU(
-                    this.lender.name.toString(),
-                    this.borrower.name.toString(),
-                    this.value,
-                    this.paid,
-                    this.linearId.id
-            )
-            else -> throw IllegalArgumentException("Unrecognised schema $schema")
-        }
-    }
+    /**
+     * This property holds a list of the nodes which can "use" this state in a valid transaction. In this case, the
+     * lender or the borrower.
+     */
+    override val participants: List<Party> get() = listOf(lender, borrower)
 
-    override fun supportedSchemas(): Iterable<MappedSchema> = listOf(IOUSchemaV1)
+    /**
+     * Helper 1: [pay] Adds an amount to the paid property.
+     * TODO: Add validation (no negative)
+     */
+    fun pay(amountToPay: Amount<Currency>) = copy(paid = paid.plus(amountToPay))
+
+    /**
+     * Helper 2: [withNewLender] Creates a copy of the current state with a newly specified lender. For use when
+     * transferring.
+     * TODO: Add validation (cannot be borrower)
+     */
+    fun withNewLender(newLender: Party) = copy(lender = newLender)
 }

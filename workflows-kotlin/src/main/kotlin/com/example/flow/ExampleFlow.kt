@@ -5,6 +5,7 @@ import com.example.contract.IOUContract
 import com.example.flow.ExampleFlow.Acceptor
 import com.example.flow.ExampleFlow.Initiator
 import com.example.state.IOUState
+import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
 import net.corda.core.flows.*
@@ -13,6 +14,7 @@ import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 import net.corda.core.utilities.ProgressTracker
 import net.corda.core.utilities.ProgressTracker.Step
+import java.util.*
 
 /**
  * This flow allows two parties (the [Initiator] and the [Acceptor]) to come to an agreement about the IOU encapsulated
@@ -28,8 +30,8 @@ import net.corda.core.utilities.ProgressTracker.Step
 object ExampleFlow {
     @InitiatingFlow
     @StartableByRPC
-    class Initiator(val iouValue: Int,
-                    val iouPaid: Int,
+    class Initiator(val iouValue: Amount<Currency>,
+                    val iouPaid: Amount<Currency>,
                     val otherParty: Party) : FlowLogic<SignedTransaction>() {
         /**
          * The progress tracker checkpoints each stage of the flow and outputs the specified messages when each
@@ -69,7 +71,7 @@ object ExampleFlow {
             // Stage 1.
             progressTracker.currentStep = GENERATING_TRANSACTION
             // Generate an unsigned transaction.
-            val iouState = IOUState(iouValue, iouPaid, serviceHub.myInfo.legalIdentities.first(), otherParty)
+            val iouState = IOUState(iouValue, serviceHub.myInfo.legalIdentities.first(), otherParty, iouPaid)
             val txCommand = Command(IOUContract.Commands.Create(), iouState.participants.map { it.owningKey })
             val txBuilder = TransactionBuilder(notary)
                     .addOutputState(iouState, IOUContract.ID)
@@ -107,7 +109,7 @@ object ExampleFlow {
                     val output = stx.tx.outputs.single().data
                     "This must be an IOU transaction." using (output is IOUState)
                     val iou = output as IOUState
-                    "I won't accept IOUs with a value over 100." using (iou.value <= 100)
+                    "I won't accept IOUs with a value over 100." using (iou.amount.quantity <= 100)
                 }
             }
             val txId = subFlow(signTransactionFlow).id
