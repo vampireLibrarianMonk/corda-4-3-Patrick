@@ -34,14 +34,12 @@ data class IOUState(val amount: Amount<Currency>,
 
     /**
      * Helper 1: [pay] Adds an amount to the paid property.
-     * TODO: Add validation (no negative)
      */
     fun pay(amountToPay: Amount<Currency>) = copy(paid = paid.plus(amountToPay))
 
     /**
      * Helper 2: [withNewLender] Creates a copy of the current state with a newly specified lender. For use when
      * transferring.
-     * TODO: Add validation (cannot be borrower)
      */
-    fun withNewLender(newLender: Party) = copy(lender = newLender)
+    fun changeLender(newLender: Party) = copy(lender = newLender)
 }

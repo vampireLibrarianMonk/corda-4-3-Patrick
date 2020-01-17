@@ -35,7 +35,8 @@ object ExampleFlow {
                     val otherParty: Party) : FlowLogic<SignedTransaction>() {
         /**
          * The progress tracker checkpoints each stage of the flow and outputs the specified messages when each
-         * checkpoint is reached in the code. See the 'progressTracker.currentStep' expressions within the call() function.
+         * checkpoint is reached in the code. See the 'progressTracker.currentStep' expressions within the call()
+         * function.
          */
         companion object {
             object GENERATING_TRANSACTION : Step("Generating transaction based on new IOU.")
@@ -91,12 +92,22 @@ object ExampleFlow {
             progressTracker.currentStep = GATHERING_SIGS
             // Send the state to the counterparty, and receive it back with their signature.
             val otherPartySession = initiateFlow(otherParty)
-            val fullySignedTx = subFlow(CollectSignaturesFlow(partSignedTx, setOf(otherPartySession), GATHERING_SIGS.childProgressTracker()))
+            val fullySignedTx = subFlow(
+                    CollectSignaturesFlow(
+                            partSignedTx,
+                            setOf(otherPartySession),
+                            GATHERING_SIGS.childProgressTracker())
+            )
 
             // Stage 5.
             progressTracker.currentStep = FINALISING_TRANSACTION
             // Notarise and record the transaction in both parties' vaults.
-            return subFlow(FinalityFlow(fullySignedTx, setOf(otherPartySession), FINALISING_TRANSACTION.childProgressTracker()))
+            return subFlow(
+                    FinalityFlow(
+                            fullySignedTx,
+                            setOf(otherPartySession),
+                            FINALISING_TRANSACTION.childProgressTracker())
+            )
         }
     }
 
