@@ -103,7 +103,7 @@ class IOUFlowTests {
             assert(txOutputs.size == 1)
 
             val recordedState = txOutputs[0].data as IOUState
-            assertEquals(recordedState.amount.quantity, 1)
+            assertEquals(recordedState.amount.quantity, 100)
             assertEquals(recordedState.lender, a.info.singleIdentity())
             assertEquals(recordedState.borrower, b.info.singleIdentity())
         }
@@ -122,7 +122,7 @@ class IOUFlowTests {
                 val ious = node.services.vaultService.queryBy<IOUState>().states
                 assertEquals(1, ious.size)
                 val recordedState = ious.single().state.data
-                assertEquals(recordedState.amount.quantity, 1)
+                assertEquals(recordedState.amount.quantity, 100)
                 assertEquals(recordedState.lender, a.info.singleIdentity())
                 assertEquals(recordedState.borrower, b.info.singleIdentity())
             }
