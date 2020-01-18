@@ -49,39 +49,43 @@ class IOUContract : Contract {
                 // Ensure that the borrower signs the transaction
                 borrowerMustSign using (command.signers.contains(out.borrower.owningKey))
 
-                // As a result of use of the currency object non-negative values are not possible
+                // As a result of use of the currency object negative currency amounts are not possible
             }
 
             is Commands.Pay -> requireThat {
-                // Check there is only one group of IOUs and that there is always an input IOU
+                // Return single state or throw an exception if more than one exists
                 val ious = tx.groupStates<IOUState, UniqueIdentifier> { it.linearId }.single()
-                requireThat { "There must be one input IOU." } using (ious.inputs.size == 1)
-                // Get input transaction
+
+                // Ensure that only one input transaction exists
+                requireThat { onlyOneInput } using (ious.inputs.size == 1)
+
+                // Return single transaction or throw an exception if more than one exists
                 val inputIOU = ious.inputs.single()
-                // Amount paid is to lender
-                "The lender and the borrower cannot have the same identity." using
-                        (inputIOU.borrower != inputIOU.lender)
-                // Calculate amount paid
-                val amountPaid = inputIOU.amount.quantity - inputIOU.paid.quantity
-                // Amount paid is positive and does not exceed payment for the IOU
-                requireThat { "Amount paid is positive." using (inputIOU.paid.quantity > 0 && amountPaid >= 0)}
+
+                // Ensure that the lender is not also the borrower
+                lenderNotBorrower using (inputIOU.borrower != inputIOU.lender)
+
+                // Calculate remaining balance after payment
+                val remainingBalance = inputIOU.amount.quantity - inputIOU.paid.quantity
+
+                // As a result of use of the currency object negative currency amounts are not possible
+
                 // Signatures are between lender and borrower
-                "Both lender and borrower together only may sign IOU transaction." using (
-                        command.signers.toSet() == inputIOU.participants.map { it.owningKey }.toSet())
-                // Check to see if we need an output IOU or not
-                if (amountPaid > 0) {
+                lenderBorrowerOnly using (command.signers.toSet() == inputIOU.participants.map { it.owningKey }.toSet())
+
+                // If there is a remaining balance ensure that an output is present
+                if (remainingBalance > 0) {
                     // If the IOU has been fully paid then there should be no IOU output state.
-                    requireThat { "There must be no output IOU as it has been fully paid." using
-                            (ious.outputs.isEmpty())}
+                    requireThat { noOutput using (ious.outputs.isEmpty())}
                 }
+
+                // No remaining balance
                 else {
-                    // If the IOU has been partially paid then it should still exist
-                    requireThat {"There must be one output IOU." using (ious.outputs.size == 1)}
+                    // Return single transaction or throw an exception if more than one exists
+                    val outputIOU = ious.outputs.single()
 
                     // Check that only the paid property changes
-                    val outputIOU = ious.outputs.single()
-                    requireThat { "Only the paid amount can change." using
-                            (inputIOU.copy(paid = outputIOU.paid) == outputIOU)}
+                    requireThat { onlyChangePayment using (inputIOU.copy(paid = outputIOU.paid) == outputIOU)}
                 }
             }
         }
