@@ -2,8 +2,9 @@ package com.example.flow
 
 import co.paralleluniverse.fibers.Suspendable
 import com.example.contract.IOUContract
-import com.example.flow.ExampleFlow.Acceptor
-import com.example.flow.ExampleFlow.Initiator
+import com.example.flow.CreateFlow.Acceptor
+import com.example.flow.CreateFlow.Initiator
+import com.example.mustbeIOUTransaction
 import com.example.state.IOUState
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
@@ -27,7 +28,7 @@ import java.util.*
  *
  * All methods called within the [FlowLogic] sub-class need to be annotated with the @Suspendable annotation.
  */
-object ExampleFlow {
+object CreateFlow {
     @InitiatingFlow
     @StartableByRPC
     class Initiator(val iouValue: Amount<Currency>,
@@ -42,7 +43,7 @@ object ExampleFlow {
             object GENERATING_TRANSACTION : Step("Generating transaction based on new IOU.")
             object VERIFYING_TRANSACTION : Step("Verifying contract constraints.")
             object SIGNING_TRANSACTION : Step("Signing transaction with our private key.")
-            object GATHERING_SIGS : Step("Gathering the counterparty's signature.") {
+            object RETRIEVING_COUNTERPARTY_SIGNATURE : Step("Gathering the counterparty's signature.") {
                 override fun childProgressTracker() = CollectSignaturesFlow.tracker()
             }
 
@@ -54,7 +55,7 @@ object ExampleFlow {
                     GENERATING_TRANSACTION,
                     VERIFYING_TRANSACTION,
                     SIGNING_TRANSACTION,
-                    GATHERING_SIGS,
+                    RETRIEVING_COUNTERPARTY_SIGNATURE,
                     FINALISING_TRANSACTION
             )
         }
@@ -69,44 +70,36 @@ object ExampleFlow {
             // Obtain a reference to the notary we want to use.
             val notary = serviceHub.networkMapCache.notaryIdentities[0]
 
-            // Stage 1.
             progressTracker.currentStep = GENERATING_TRANSACTION
-            // Generate an unsigned transaction.
             val iouState = IOUState(iouValue, serviceHub.myInfo.legalIdentities.first(), otherParty, iouPaid)
             val txCommand = Command(IOUContract.Commands.Create(), iouState.participants.map { it.owningKey })
             val txBuilder = TransactionBuilder(notary)
                     .addOutputState(iouState, IOUContract.ID)
                     .addCommand(txCommand)
 
-            // Stage 2.
             progressTracker.currentStep = VERIFYING_TRANSACTION
-            // Verify that the transaction is valid.
             txBuilder.verify(serviceHub)
 
-            // Stage 3.
             progressTracker.currentStep = SIGNING_TRANSACTION
-            // Sign the transaction.
             val partSignedTx = serviceHub.signInitialTransaction(txBuilder)
 
-            // Stage 4.
-            progressTracker.currentStep = GATHERING_SIGS
-            // Send the state to the counterparty, and receive it back with their signature.
+            progressTracker.currentStep = RETRIEVING_COUNTERPARTY_SIGNATURE
             val otherPartySession = initiateFlow(otherParty)
             val fullySignedTx = subFlow(
                     CollectSignaturesFlow(
                             partSignedTx,
                             setOf(otherPartySession),
-                            GATHERING_SIGS.childProgressTracker())
+                            RETRIEVING_COUNTERPARTY_SIGNATURE.childProgressTracker()
+                    )
             )
 
-            // Stage 5.
             progressTracker.currentStep = FINALISING_TRANSACTION
-            // Notarise and record the transaction in both parties' vaults.
             return subFlow(
                     FinalityFlow(
                             fullySignedTx,
                             setOf(otherPartySession),
-                            FINALISING_TRANSACTION.childProgressTracker())
+                            FINALISING_TRANSACTION.childProgressTracker()
+                    )
             )
         }
     }
@@ -118,9 +111,7 @@ object ExampleFlow {
             val signTransactionFlow = object : SignTransactionFlow(otherPartySession) {
                 override fun checkTransaction(stx: SignedTransaction) = requireThat {
                     val output = stx.tx.outputs.single().data
-                    "This must be an IOU transaction." using (output is IOUState)
-                    val iou = output as IOUState
-                    "I won't accept IOUs with a value over 100." using (iou.amount.quantity <= 100)
+                    mustbeIOUTransaction using (output is IOUState)
                 }
             }
             val txId = subFlow(signTransactionFlow).id

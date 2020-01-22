@@ -10,3 +10,5 @@ contracts-kotlin/out/
 workflows-java/build/
 workflows-kotlin/build/
 workflows-kotlin/out/
+workflows-java/logs/*
+workflows-kotlin/logs/*
