@@ -1347,7 +1347,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:21,042Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222349.590/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:21,194Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222349.590/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:22,717Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:22,894Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:22,894Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:23,399Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1401,7 +1401,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [WARN ] 2020-01-13T22:24:40,176Z [main] cordapp.CordappResolver. - The CorDapp (name: CorDapp Example, file: cordapp-example-contracts-0.1) is installed multiple times on the node. The following files correspond to the exact same content: [cordapp-example-contracts-0.1] {}
 [WARN ] 2020-01-13T22:24:40,176Z [main] cordapp.CordappResolver. - The CorDapp (name: CorDapp Example, file: cordapp-example-workflows-0.1) is installed multiple times on the node. The following files correspond to the exact same content: [cordapp-example-workflows-0.1] {}
 [INFO ] 2020-01-13T22:24:40,212Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:40,263Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:40,263Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:40,266Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1456,7 +1456,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:41,788Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222349.590/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:41,800Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222349.590/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:41,842Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:41,896Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:41,896Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:41,900Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1510,10 +1510,10 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:43,195Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:24:43,196Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954283049) {}
 [INFO ] 2020-01-13T22:24:43,196Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:24:43,197Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:43,197Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:24:43,201Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:43,201Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:43,197Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:43,197Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:43,201Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:43,201Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [WARN ] 2020-01-13T22:24:43,793Z [Mock network] transactions.TransactionBuilder. - Signature constraints not available on network requiring a minimum platform version of 4. Current is: 1. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000001, flow-id=435dbe7a-f172-467b-8fc6-872b6e2eb11d, invocation_id=e6470c38-d4e9-4f4c-9f22-b46ea319fea0, invocation_timestamp=2020-01-13T22:24:43.314Z, origin=Only For Testing, session_id=e6470c38-d4e9-4f4c-9f22-b46ea319fea0, session_timestamp=2020-01-13T22:24:43.314Z, thread-id=207}
 [WARN ] 2020-01-13T22:24:43,793Z [Mock network] transactions.TransactionBuilder. - Reverting back to using hash constraints for contract com.example.contract.IOUContract {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000001, flow-id=435dbe7a-f172-467b-8fc6-872b6e2eb11d, invocation_id=e6470c38-d4e9-4f4c-9f22-b46ea319fea0, invocation_timestamp=2020-01-13T22:24:43.314Z, origin=Only For Testing, session_id=e6470c38-d4e9-4f4c-9f22-b46ea319fea0, session_timestamp=2020-01-13T22:24:43.314Z, thread-id=207}
 [INFO ] 2020-01-13T22:24:46,446Z [Mock network] corda.flow. - Received transaction acknowledgement request from party O=Mock Company 1, L=London, C=GB. {fiber-id=10000002, flow-id=2638c23f-6ca4-4440-95c1-581f66ca2001, invocation_id=3ecdbec4-766c-47b8-ba7c-12f5ed7e621a, invocation_timestamp=2020-01-13T22:24:46.350Z, origin=O=Mock Company 1, L=London, C=GB, session_id=3ecdbec4-766c-47b8-ba7c-12f5ed7e621a, session_timestamp=2020-01-13T22:24:46.350Z, thread-id=207, tx_id=E52283639738DF5CB54BB03DABDAE18E38744368043B8020C0A41570C8C607F2}
@@ -1532,7 +1532,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:47,044Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:47,059Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:47,122Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:47,135Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:47,135Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:47,144Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1584,7 +1584,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:48,432Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/1/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:48,445Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/1/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:48,482Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:48,529Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:48,529Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:48,533Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1639,7 +1639,7 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:49,649Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:49,659Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222446.932/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:49,696Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:49,746Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:49,746Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:49,749Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -1693,10 +1693,10 @@ java.lang.IllegalArgumentException: Failed requirement: All of the participants 
 [INFO ] 2020-01-13T22:24:50,900Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:24:50,902Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954290763) {}
 [INFO ] 2020-01-13T22:24:50,902Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:50,904Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [ERROR] 2020-01-13T22:24:52,166Z [Mock network] internal.Verifier. - Error validating transaction FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08. [errorCode=1dpk8h1, moreInformationAt=https://errors.corda.net/OS/4.3/1dpk8h1] {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000003, flow-id=077dca68-807e-4612-b35a-f125fe284712, invocation_id=6c7330a6-0851-4371-9122-1517ddf70484, invocation_timestamp=2020-01-13T22:24:50.906Z, origin=Only For Testing, session_id=6c7330a6-0851-4371-9122-1517ddf70484, session_timestamp=2020-01-13T22:24:50.906Z, thread-id=384}
 java.lang.IllegalArgumentException: Failed requirement: The IOU's value must be non-negative.
 	at com.example.contract.IOUContract.verify(IOUContract.kt:70) ~[classes/:?]
@@ -1709,8 +1709,8 @@ java.lang.IllegalArgumentException: Failed requirement: The IOU's value must be 
 	at net.corda.core.transactions.TransactionBuilder.toWireTransaction(TransactionBuilder.kt:130) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.toLedgerTransaction(TransactionBuilder.kt:551) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1731,8 +1731,8 @@ java.lang.IllegalArgumentException: Failed requirement: The IOU's value must be 
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1747,15 +1747,15 @@ java.lang.IllegalArgumentException: Failed requirement: The IOU's value must be 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_231]
 	at net.corda.node.utilities.AffinityExecutor$ServiceAffinityExecutor$1$thread$1.run(AffinityExecutor.kt:63) ~[corda-node-4.3.jar:?]
 [INFO ] 2020-01-13T22:24:52,175Z [Mock network] corda.flow. - Flow raised an error: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08. Sending it to flow hospital to be triaged. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000003, flow-id=077dca68-807e-4612-b35a-f125fe284712, invocation_id=6c7330a6-0851-4371-9122-1517ddf70484, invocation_timestamp=2020-01-13T22:24:50.906Z, origin=Only For Testing, session_id=6c7330a6-0851-4371-9122-1517ddf70484, session_timestamp=2020-01-13T22:24:50.906Z, thread-id=384}
-[INFO ] 2020-01-13T22:24:52,179Z [Mock network] statemachine.StaffedFlowHospital. - Flow [077dca68-807e-4612-b35a-f125fe284712] admitted to hospital in state StateMachineState(checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.CreateFlow$Initiator, classToInitiateWith=class com.example.flow.CreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), flowLogic=com.example.flow.CreateFlow$Initiator@484a7b4, pendingDeduplicationHandlers=[], isFlowResumed=true, isTransactionTracked=false, isAnyCheckpointPersisted=true, isStartIdempotent=false, isRemoved=false, senderUUID=573e11a1-2ee3-48e8-951a-daf4f14326da) {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000003, flow-id=077dca68-807e-4612-b35a-f125fe284712, invocation_id=6c7330a6-0851-4371-9122-1517ddf70484, invocation_timestamp=2020-01-13T22:24:50.906Z, origin=Only For Testing, session_id=6c7330a6-0851-4371-9122-1517ddf70484, session_timestamp=2020-01-13T22:24:50.906Z, thread-id=384}
+[INFO ] 2020-01-13T22:24:52,179Z [Mock network] statemachine.StaffedFlowHospital. - Flow [077dca68-807e-4612-b35a-f125fe284712] admitted to hospital in state StateMachineState(checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.IOUCreateFlow$Initiator, classToInitiateWith=class com.example.flow.IOUCreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), flowLogic=com.example.flow.IOUCreateFlow$Initiator@484a7b4, pendingDeduplicationHandlers=[], isFlowResumed=true, isTransactionTracked=false, isAnyCheckpointPersisted=true, isStartIdempotent=false, isRemoved=false, senderUUID=573e11a1-2ee3-48e8-951a-daf4f14326da) {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000003, flow-id=077dca68-807e-4612-b35a-f125fe284712, invocation_id=6c7330a6-0851-4371-9122-1517ddf70484, invocation_timestamp=2020-01-13T22:24:50.906Z, origin=Only For Testing, session_id=6c7330a6-0851-4371-9122-1517ddf70484, session_timestamp=2020-01-13T22:24:50.906Z, thread-id=384}
 [INFO ] 2020-01-13T22:24:52,183Z [Mock network] statemachine.StaffedFlowHospital. - Error 1 of 1: {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000003, flow-id=077dca68-807e-4612-b35a-f125fe284712, invocation_id=6c7330a6-0851-4371-9122-1517ddf70484, invocation_timestamp=2020-01-13T22:24:50.906Z, origin=Only For Testing, session_id=6c7330a6-0851-4371-9122-1517ddf70484, session_timestamp=2020-01-13T22:24:50.906Z, thread-id=384}
 net.corda.core.contracts.TransactionVerificationException$ContractRejection: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08
 	at net.corda.core.internal.Verifier.verifyContracts(TransactionVerifierServiceInternal.kt:403) ~[corda-core-4.3.jar:?]
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1779,8 +1779,8 @@ net.corda.core.contracts.TransactionVerificationException$ContractRejection: Con
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1805,7 +1805,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
   Event: DoRemainingWork
   Actions: 
     CreateTransaction
-    PersistCheckpoint(id=[077dca68-807e-4612-b35a-f125fe284712], checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.CreateFlow$Initiator, classToInitiateWith=class com.example.flow.CreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), isCheckpointUpdate=false)
+    PersistCheckpoint(id=[077dca68-807e-4612-b35a-f125fe284712], checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.IOUCreateFlow$Initiator, classToInitiateWith=class com.example.flow.IOUCreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), isCheckpointUpdate=false)
     PersistDeduplicationFacts(deduplicationHandlers=[net.corda.node.internal.FlowStarterImpl$startFlow$startFlowEvent$1@7b53ce15])
     CommitTransaction
     AcknowledgeMessages(deduplicationHandlers=[net.corda.node.internal.FlowStarterImpl$startFlow$startFlowEvent$1@7b53ce15])
@@ -1866,8 +1866,8 @@ net.corda.core.contracts.TransactionVerificationException$ContractRejection: Con
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1891,8 +1891,8 @@ net.corda.core.contracts.TransactionVerificationException$ContractRejection: Con
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -1917,7 +1917,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
   Event: DoRemainingWork
   Actions: 
     CreateTransaction
-    PersistCheckpoint(id=[077dca68-807e-4612-b35a-f125fe284712], checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.CreateFlow$Initiator, classToInitiateWith=class com.example.flow.CreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), isCheckpointUpdate=false)
+    PersistCheckpoint(id=[077dca68-807e-4612-b35a-f125fe284712], checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.IOUCreateFlow$Initiator, classToInitiateWith=class com.example.flow.IOUCreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Clean, numberOfSuspends=0), isCheckpointUpdate=false)
     PersistDeduplicationFacts(deduplicationHandlers=[net.corda.node.internal.FlowStarterImpl$startFlow$startFlowEvent$1@7b53ce15])
     CommitTransaction
     AcknowledgeMessages(deduplicationHandlers=[net.corda.node.internal.FlowStarterImpl$startFlow$startFlowEvent$1@7b53ce15])
@@ -1985,7 +1985,7 @@ checkpoint.errorState.propagating:
     CommitTransaction
     AcknowledgeMessages(deduplicationHandlers=[])
     RemoveSessionBindings(sessionIds=[])
-    RemoveFlow(flowId=[077dca68-807e-4612-b35a-f125fe284712], removalReason=ErrorFinish(flowErrors=[FlowError(errorId=-2681190165101519989, exception=net.corda.core.contracts.TransactionVerificationException$ContractRejection: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08)]), lastState=StateMachineState(checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.CreateFlow$Initiator, classToInitiateWith=class com.example.flow.CreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Errored(errors=[FlowError(errorId=-2681190165101519989, exception=net.corda.core.contracts.TransactionVerificationException$ContractRejection: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08)], propagatedIndex=1, propagating=true), numberOfSuspends=0), flowLogic=com.example.flow.CreateFlow$Initiator@484a7b4, pendingDeduplicationHandlers=[], isFlowResumed=false, isTransactionTracked=false, isAnyCheckpointPersisted=true, isStartIdempotent=false, isRemoved=true, senderUUID=573e11a1-2ee3-48e8-951a-daf4f14326da))
+    RemoveFlow(flowId=[077dca68-807e-4612-b35a-f125fe284712], removalReason=ErrorFinish(flowErrors=[FlowError(errorId=-2681190165101519989, exception=net.corda.core.contracts.TransactionVerificationException$ContractRejection: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08)]), lastState=StateMachineState(checkpoint=Checkpoint(invocationContext=InvocationContext(origin=RPC(actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB)), trace=Trace(invocationId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Invocation, sessionId=6c7330a6-0851-4371-9122-1517ddf70484, timestamp: 2020-01-13T22:24:50.906Z, entityType: Session), actor=Actor(id=Id(value=Only For Testing), serviceId=AuthServiceId(value=TEST), owningLegalIdentity=O=Mock Company 1, L=London, C=GB), externalTrace=null, impersonatedActor=null), ourIdentity=O=Mock Company 1, L=London, C=GB, sessions={}, subFlowStack=[Initiating(flowClass=class com.example.flow.IOUCreateFlow$Initiator, classToInitiateWith=class com.example.flow.IOUCreateFlow$Initiator, flowInfo=FlowInfo(flowVersion=1, appName=<unknown>), subFlowVersion=CorDappFlow(platformVersion=5, corDappName=cordapp-example-workflows-0.1, corDappHash=384A28501E09541C4802601B386C6C68E0BF55E1FC0F8074A75D0E5D3F5E0E51), isEnabledTimedFlow=false)], flowState=Unstarted(flowStart=Explicit, frozenFlowLogic=96DB99AE42652F8F3A84A36A985C32824F4D3AD45397B1E04B8BBFBF4FF2BBAB), errorState=Errored(errors=[FlowError(errorId=-2681190165101519989, exception=net.corda.core.contracts.TransactionVerificationException$ContractRejection: Contract verification failed: Failed requirement: The IOU's value must be non-negative., contract: com.example.contract.IOUContract, transaction: FA3AA30A40038C09D03F3C79297432AF0AC48F49104AD3FD0B8266AAC68F1F08)], propagatedIndex=1, propagating=true), numberOfSuspends=0), flowLogic=com.example.flow.IOUCreateFlow$Initiator@484a7b4, pendingDeduplicationHandlers=[], isFlowResumed=false, isTransactionTracked=false, isAnyCheckpointPersisted=true, isStartIdempotent=false, isRemoved=true, senderUUID=573e11a1-2ee3-48e8-951a-daf4f14326da))
   Continuation: Abort
   Diff between previous and next state:
 isRemoved: 
@@ -2001,8 +2001,8 @@ net.corda.core.contracts.TransactionVerificationException$ContractRejection: Con
 	at net.corda.core.internal.Verifier.verify(TransactionVerifierServiceInternal.kt:72) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.LedgerTransaction.verify(LedgerTransaction.kt:136) ~[corda-core-4.3.jar:?]
 	at net.corda.core.transactions.TransactionBuilder.verify(TransactionBuilder.kt:559) ~[corda-core-4.3.jar:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:80) ~[classes/:?]
-	at com.example.flow.CreateFlow$Initiator.call(CreateFlow.kt:31) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:80) ~[classes/:?]
+	at com.example.flow.IOUCreateFlow$Initiator.call(IOUCreateFlow.kt:31) ~[classes/:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:270) ~[corda-node-4.3.jar:?]
 	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:46) ~[corda-node-4.3.jar:?]
 	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1092) ~[quasar-core-0.7.10-jdk8.jar:0.7.10]
@@ -2025,7 +2025,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:52,402Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:52,417Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:52,457Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:52,472Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:52,472Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:52,481Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2077,7 +2077,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:53,659Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/1/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:53,669Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/1/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:53,709Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:53,764Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:53,764Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:53,768Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2132,7 +2132,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:54,851Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:54,862Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222452.280/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:54,899Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:54,944Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:54,944Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:54,946Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2186,10 +2186,10 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:56,015Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:24:56,016Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954295897) {}
 [INFO ] 2020-01-13T22:24:56,016Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:24:56,017Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:57,041Z [Mock network] corda.flow. - Received transaction acknowledgement request from party O=Mock Company 1, L=London, C=GB. {fiber-id=10000005, flow-id=dd583998-6c42-49b7-82c1-9ace18859980, invocation_id=a0635198-0233-4dc3-a5fd-81bc6a15c998, invocation_timestamp=2020-01-13T22:24:57.025Z, origin=O=Mock Company 1, L=London, C=GB, session_id=a0635198-0233-4dc3-a5fd-81bc6a15c998, session_timestamp=2020-01-13T22:24:57.025Z, thread-id=557, tx_id=C64FDDE9898EDA456C9A0F22D83BCDF5CEE18FB28376C47700535E862A1CB860}
 [INFO ] 2020-01-13T22:24:57,056Z [Mock network] corda.flow. - Transaction dependencies resolution completed. {fiber-id=10000005, flow-id=dd583998-6c42-49b7-82c1-9ace18859980, invocation_id=a0635198-0233-4dc3-a5fd-81bc6a15c998, invocation_timestamp=2020-01-13T22:24:57.025Z, origin=O=Mock Company 1, L=London, C=GB, session_id=a0635198-0233-4dc3-a5fd-81bc6a15c998, session_timestamp=2020-01-13T22:24:57.025Z, thread-id=557, tx_id=C64FDDE9898EDA456C9A0F22D83BCDF5CEE18FB28376C47700535E862A1CB860}
 [INFO ] 2020-01-13T22:24:57,119Z [Mock network] corda.flow. - No need to notarise this transaction. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000004, flow-id=d9f83c48-4f55-4d8c-80b6-ab98ffa276a2, invocation_id=728dab2c-f2a3-42db-9b9f-200d673e300e, invocation_timestamp=2020-01-13T22:24:56.019Z, origin=Only For Testing, session_id=728dab2c-f2a3-42db-9b9f-200d673e300e, session_timestamp=2020-01-13T22:24:56.019Z, thread-id=557, tx_id=C64FDDE9898EDA456C9A0F22D83BCDF5CEE18FB28376C47700535E862A1CB860}
@@ -2206,7 +2206,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:57,313Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:57,323Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:57,351Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:57,363Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:57,363Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:57,366Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2258,7 +2258,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:58,526Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/1/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:58,536Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/1/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:58,573Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:58,624Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:58,624Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:58,628Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2313,7 +2313,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:24:59,753Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:24:59,764Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222457.212/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:24:59,798Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:24:59,837Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:24:59,837Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:24:59,839Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2367,10 +2367,10 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:00,897Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:25:00,897Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954300785) {}
 [INFO ] 2020-01-13T22:25:00,897Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:00,898Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:01,948Z [Mock network] corda.flow. - Received transaction acknowledgement request from party O=Mock Company 1, L=London, C=GB. {fiber-id=10000007, flow-id=c579c837-ce5b-49d5-9081-336ec1d0a68b, invocation_id=392a8d59-6af4-4771-8225-dcf44b79940d, invocation_timestamp=2020-01-13T22:25:01.929Z, origin=O=Mock Company 1, L=London, C=GB, session_id=392a8d59-6af4-4771-8225-dcf44b79940d, session_timestamp=2020-01-13T22:25:01.929Z, thread-id=730, tx_id=C718C33639954AD412C463FD30B17942EAA462EE0B3FA6FC85E1E57B41165063}
 [INFO ] 2020-01-13T22:25:01,956Z [Mock network] corda.flow. - Transaction dependencies resolution completed. {fiber-id=10000007, flow-id=c579c837-ce5b-49d5-9081-336ec1d0a68b, invocation_id=392a8d59-6af4-4771-8225-dcf44b79940d, invocation_timestamp=2020-01-13T22:25:01.929Z, origin=O=Mock Company 1, L=London, C=GB, session_id=392a8d59-6af4-4771-8225-dcf44b79940d, session_timestamp=2020-01-13T22:25:01.929Z, thread-id=730, tx_id=C718C33639954AD412C463FD30B17942EAA462EE0B3FA6FC85E1E57B41165063}
 [INFO ] 2020-01-13T22:25:02,014Z [Mock network] corda.flow. - No need to notarise this transaction. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000006, flow-id=b28036ca-1f9b-4ce5-be4e-5b6efcb9e6bf, invocation_id=6cc8e0dc-b78a-48c4-aaa3-d592f2add243, invocation_timestamp=2020-01-13T22:25:00.900Z, origin=Only For Testing, session_id=6cc8e0dc-b78a-48c4-aaa3-d592f2add243, session_timestamp=2020-01-13T22:25:00.900Z, thread-id=730, tx_id=C718C33639954AD412C463FD30B17942EAA462EE0B3FA6FC85E1E57B41165063}
@@ -2387,7 +2387,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:02,219Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:02,228Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:02,259Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:02,269Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:02,269Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:02,271Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2439,7 +2439,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:03,375Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/1/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:03,384Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/1/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:03,412Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:03,452Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:03,452Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:03,455Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2494,7 +2494,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:04,523Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:04,531Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222502.119/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:04,563Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:04,609Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:04,609Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:04,611Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2548,10 +2548,10 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:05,592Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:25:05,592Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954305471) {}
 [INFO ] 2020-01-13T22:25:05,592Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:05,593Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:06,550Z [Mock network] corda.flow. - Received transaction acknowledgement request from party O=Mock Company 1, L=London, C=GB. {fiber-id=10000009, flow-id=6ca36eaa-d408-4193-82a9-e8f41f4f13f3, invocation_id=8aa41a41-5cff-481e-b108-9748bde25486, invocation_timestamp=2020-01-13T22:25:06.538Z, origin=O=Mock Company 1, L=London, C=GB, session_id=8aa41a41-5cff-481e-b108-9748bde25486, session_timestamp=2020-01-13T22:25:06.538Z, thread-id=903, tx_id=450F68E6B222E0195ACA866E0EBA04834F8DC144C39D06FA87087000B2F54E43}
 [INFO ] 2020-01-13T22:25:06,562Z [Mock network] corda.flow. - Transaction dependencies resolution completed. {fiber-id=10000009, flow-id=6ca36eaa-d408-4193-82a9-e8f41f4f13f3, invocation_id=8aa41a41-5cff-481e-b108-9748bde25486, invocation_timestamp=2020-01-13T22:25:06.538Z, origin=O=Mock Company 1, L=London, C=GB, session_id=8aa41a41-5cff-481e-b108-9748bde25486, session_timestamp=2020-01-13T22:25:06.538Z, thread-id=903, tx_id=450F68E6B222E0195ACA866E0EBA04834F8DC144C39D06FA87087000B2F54E43}
 [INFO ] 2020-01-13T22:25:06,602Z [Mock network] corda.flow. - No need to notarise this transaction. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000008, flow-id=de0cd727-9a54-493e-bdae-fbd7e7e0edef, invocation_id=1ceff637-b5a5-4083-beaf-482d124944d8, invocation_timestamp=2020-01-13T22:25:05.595Z, origin=Only For Testing, session_id=1ceff637-b5a5-4083-beaf-482d124944d8, session_timestamp=2020-01-13T22:25:05.595Z, thread-id=903, tx_id=450F68E6B222E0195ACA866E0EBA04834F8DC144C39D06FA87087000B2F54E43}
@@ -2568,7 +2568,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:06,755Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/0/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:06,767Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/0/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:06,794Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:06,804Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:06,804Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:06,809Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2620,7 +2620,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:07,955Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/1/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:07,965Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/1/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:07,997Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:08,035Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:08,035Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:08,036Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2675,7 +2675,7 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:09,017Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/2/cordapps/cordapp-example-contracts-0.1.jar {}
 [INFO ] 2020-01-13T22:25:09,029Z [main] cordapp.JarScanningCordappLoader. - Scanning CorDapp in file:/C:/Users/Mr.%20Simple/samples/cordapp-example/workflows-kotlin/build/mock-network/20200113-222506.663/nodes/2/cordapps/cordapp-example-workflows-0.1.jar {}
 [INFO ] 2020-01-13T22:25:09,057Z [main] internal.InternalMockNetwork$MockNode. - Node starting up ... {}
-[INFO ] 2020-01-13T22:25:09,094Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[INFO ] 2020-01-13T22:25:09,094Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:09,095Z [main] internal.InternalMockNetwork$MockNode. - Loaded network parameters: NetworkParameters {
       minimumPlatformVersion=1
       notaries=[NotaryInfo(identity=O=Notary Service, L=Zurich, C=CH, validating=true)]
@@ -2729,10 +2729,10 @@ Caused by: java.lang.IllegalArgumentException: Failed requirement: The IOU's val
 [INFO ] 2020-01-13T22:25:10,026Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
 [INFO ] 2020-01-13T22:25:10,027Z [main] network.PersistentNetworkMapCache. - Adding node with info: NodeInfo(addresses=[mock.node:1000], legalIdentitiesAndCerts=[O=Mock Company 2, L=London, C=GB], platformVersion=5, serial=1578954309914) {}
 [INFO ] 2020-01-13T22:25:10,027Z [main] network.PersistentNetworkMapCache. - Previous node was identical to incoming one - doing nothing {}
-[WARN ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
-[WARN ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.CreateFlow$Initiator, currently using: class com.example.flow.CreateFlow$Acceptor {}
-[INFO ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Registered com.example.flow.CreateFlow$Initiator to initiate com.example.flow.CreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
+[WARN ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Multiple flows are registered for InitiatingFlow: class com.example.flow.IOUCreateFlow$Initiator, currently using: class com.example.flow.IOUCreateFlow$Acceptor {}
+[INFO ] 2020-01-13T22:25:10,028Z [main] internal.NodeFlowManager. - Registered com.example.flow.IOUCreateFlow$Initiator to initiate com.example.flow.IOUCreateFlow$Acceptor (version 1) {}
 [INFO ] 2020-01-13T22:25:11,071Z [Mock network] corda.flow. - Received transaction acknowledgement request from party O=Mock Company 1, L=London, C=GB. {fiber-id=10000011, flow-id=2e502fb3-4e47-4edc-898d-23a04b5527e8, invocation_id=a3222a93-49ae-4b30-b262-428f2c3df716, invocation_timestamp=2020-01-13T22:25:11.056Z, origin=O=Mock Company 1, L=London, C=GB, session_id=a3222a93-49ae-4b30-b262-428f2c3df716, session_timestamp=2020-01-13T22:25:11.056Z, thread-id=1076, tx_id=27F1159FB4E02D8FFC9769409A2E72ABA479587476F279D0462EC1D92FED50B6}
 [INFO ] 2020-01-13T22:25:11,078Z [Mock network] corda.flow. - Transaction dependencies resolution completed. {fiber-id=10000011, flow-id=2e502fb3-4e47-4edc-898d-23a04b5527e8, invocation_id=a3222a93-49ae-4b30-b262-428f2c3df716, invocation_timestamp=2020-01-13T22:25:11.056Z, origin=O=Mock Company 1, L=London, C=GB, session_id=a3222a93-49ae-4b30-b262-428f2c3df716, session_timestamp=2020-01-13T22:25:11.056Z, thread-id=1076, tx_id=27F1159FB4E02D8FFC9769409A2E72ABA479587476F279D0462EC1D92FED50B6}
 [INFO ] 2020-01-13T22:25:11,123Z [Mock network] corda.flow. - No need to notarise this transaction. {actor_id=Only For Testing, actor_owning_identity=O=Mock Company 1, L=London, C=GB, actor_store_id=TEST, fiber-id=10000010, flow-id=32217f3a-ba64-496f-93cc-ac1e470cc4ba, invocation_id=bfeaf07b-20a7-438c-9913-059d61f4ee2d, invocation_timestamp=2020-01-13T22:25:10.030Z, origin=Only For Testing, session_id=bfeaf07b-20a7-438c-9913-059d61f4ee2d, session_timestamp=2020-01-13T22:25:10.030Z, thread-id=1076, tx_id=27F1159FB4E02D8FFC9769409A2E72ABA479587476F279D0462EC1D92FED50B6}
